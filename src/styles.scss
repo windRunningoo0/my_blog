@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~quill/dist/quill.snow.css';
+@import './assets/styles/main.scss';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+ul {margin: 0; padding: 0;list-style: none;}
+img {width: 100%;}
+
+:root {
+    .section-name {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .main-edit-area {
+        .mat-form-field-flex {
+            line-height: 40px;
+        }
+        .mat-form-field-appearance-legacy .mat-form-field-underline {
+            background-color: rgba(192, 192, 192, 0.42);
+        }
+    }
+    
+}

@@ -1,0 +1,55 @@
+header {
+    margin: -20px -20px 0 -20px;
+    line-height: 40px;
+    background-color: #f8f8f8;
+
+    .main {
+        width: 630px;
+        margin: auto;
+    }
+
+    .header-operate-btn-group {
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+
+    button {
+        border-radius: 0;
+    }
+    .next-step-btn {
+        background-color: rgb(146, 192, 20);
+    }
+}
+
+.mat-form-field {
+    width: 100%;
+
+    .mat-form-field-flex {
+        line-height: 20px;
+    }
+
+    div {
+        display: none;
+    }
+}
+
+mat-form-field {
+    .mat-form-field-wrapper {
+        display: none;
+    }
+}
+
+.main-edit-area {
+    width: 630px;
+    margin: auto;
+    margin-top: 30px;
+    .mat-form-field-appearance-legacy .mat-form-field-underline {
+        background-color: rgba(156, 156, 156, 0.42) !important;
+    }
+    div  {
+        display: none;
+    }
+    
+}
+

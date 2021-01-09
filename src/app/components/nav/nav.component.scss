@@ -1,0 +1,28 @@
+.avatar-img {
+    width: 48px;
+    float: left;
+    margin-right: 8px;
+}
+.nav {
+    margin-bottom: 20px;
+}
+
+.user-info-and-nav {
+    overflow: hidden;
+}
+
+.user-info {
+    // float: left;
+    .name {
+        margin: 0;
+    }
+    .sinature {
+        clear: both;
+    }
+}
+
+nav {
+    a {
+        margin-right: 10px;
+    }
+}
