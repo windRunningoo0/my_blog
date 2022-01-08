@@ -9,8 +9,8 @@ import { Gallery } from 'src/app/app.interface';
 export class RecentGalleriesComponent implements OnInit {
 
   recentGalleries: Gallery[] = [
-    {title: '青海湖', coverImg: '', time: '2020-09-10'},
-    {title: '黄山', coverImg: '', time: '2019-09-10'},
+    {name: '青海湖', coverImg: '', time: '2020-09-10'},
+    {name: '黄山', coverImg: '', time: '2019-09-10'},
   ]
 
   constructor() { }

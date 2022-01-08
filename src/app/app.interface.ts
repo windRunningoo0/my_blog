@@ -1,12 +1,14 @@
 export interface BlogPreview {
+    id?: string,
     title: string;
-    content: string;
+    content?: string;
+    previewContent?: string;
     time?: string;
     img?: string;
 }
 
 export interface Gallery {
-    title: string;
+    name: string;
     time: string;
     coverImg: string
 }

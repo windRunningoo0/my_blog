@@ -7,13 +7,16 @@ import { BroadcastComponent } from './containers/broadcast/broadcast.component';
 import { BlogDetailComponent } from './containers/blog-detail/blog-detail.component';
 import { BlogEditComponent } from './containers/blog-edit/blog-edit.component';
 import { UserZoneComponent } from './containers/user-zone/user-zone.component';
+import { AactpMicroSharesComponent } from './containers/aactp-micro-shares/aactp-micro-shares.component';
+import { WelcomePageComponent } from './containers/welcome-page/welcome-page.component';
 
 const routes: Routes = [
+  {path: 'user/:userId/welcome', component: WelcomePageComponent},
   {
-    path: 'people/windRunning',
+    path: 'user/:userId',
     component: UserZoneComponent,
     children: [
-      {path:'', component: HomepageComponent},
+      {path:'homepage', component: HomepageComponent},
       {path:'broadcast', component: BroadcastComponent},
       {path: 'gallery', component: GalleryComponent},
       {path: 'blog', component: BlogComponent},
@@ -21,13 +24,23 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'note/:id',
+    path: 'note',
     children: [
-      {path: '', component: BlogDetailComponent},
-      {path: 'edit', component: BlogEditComponent,}
+      {path: 'edit', component: BlogEditComponent},
+      {
+        path: ':id',
+        children: [
+          {path: '', component: BlogDetailComponent},
+          {path: 'edit', component: BlogEditComponent,}
+        ]
+      },
+      
     ]
   },
-
+  {
+    path: 'aactp/micro-shares',
+    component: AactpMicroSharesComponent
+  }
   
 ];
 

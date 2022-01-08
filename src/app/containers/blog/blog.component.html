@@ -1,8 +1,4 @@
 <section>
-    <!-- <h1>逆风的日记</h1> -->
-    <ul>
-        <li *ngFor="let blog of blogs let i, j">
-            <app-blog-preview [blog]="blog"></app-blog-preview>
-        </li>
-    </ul>
+    <app-recent-blogs></app-recent-blogs>
+    <button mat-raised-button color="accent" (click)="addBlog()"><i class="fa fa-plus-square"></i> 添加文章</button>
 </section>

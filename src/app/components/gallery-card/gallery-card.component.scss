@@ -1,0 +1,22 @@
+.gallery-card {
+    // float: left;
+    box-shadow: 4px 4px 6px #5a5a5a;
+
+    .gallery-cover-img {
+        // width: 112px; height: 112px;
+        background-color: rgb(240, 240, 240);
+        border: 1px solid #cccccc;
+        overflow: hidden;
+    }
+    
+    .gallery-desc {
+        p {
+            margin: 0;
+            margin-top: 6px;
+        }
+        time {
+            font-size: 12px;
+            color: rgb(168, 168, 168);
+        }
+    }
+}

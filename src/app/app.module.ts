@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 // import { MaterialModule } from './modules/material/material.module';
 import { MatSliderModule, MatSlider } from '@angular/material/slider';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,6 +23,15 @@ import { BlogEditComponent } from './containers/blog-edit/blog-edit.component';
 import { UserZoneComponent } from './containers/user-zone/user-zone.component';
 import { BlogEditModule } from './modules/blog-edit/blog-edit.module';
 import { QuillModule } from 'ngx-quill';
+import { AactpMicroSharesComponent } from './containers/aactp-micro-shares/aactp-micro-shares.component';
+import { BlogService } from './services/blog/blog.service';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { WelcomePageComponent } from './containers/welcome-page/welcome-page.component';
+import {UserService} from './services/user/user.service';
+import { CommonService } from './services/common/common.service';
+import { GalleryService } from './services/gallery/gallery.service'
+import { GalleryCardComponent } from './components/gallery-card/gallery-card.component';
 
 
 const modules = {
@@ -65,19 +74,25 @@ const modules = {
     BlogDetailComponent,
     // BlogEditComponent,
     UserZoneComponent,
+    AactpMicroSharesComponent,
+    WelcomePageComponent,
+    GalleryCardComponent,
   ],
   imports: [
+    FormsModule,
+    HttpClientModule,
     MatSliderModule,
     SharedModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     QuillModule.forRoot({
       modules
     })
     // BlogEditModule
   ],
-  providers: [],
+  providers: [BlogService, UserService, CommonService, GalleryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

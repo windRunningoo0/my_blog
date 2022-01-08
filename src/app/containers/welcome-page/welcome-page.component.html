@@ -1,0 +1,5 @@
+<section class="user-info">
+    <h1>{{userInfo?.name}}的个人网站<a mat-button :routerLink="/user/{{userInfo?.userId}}/homepage">进入</a></h1>
+    
+    <img [src]="userInfo?.welcomeImages[0]"/>
+</section>

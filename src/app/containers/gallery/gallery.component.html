@@ -1,1 +1,15 @@
-<p>gallery works!</p>
+<section class="gallery">
+    <header>
+        <h1>相册</h1>
+        <button mat-raised-button color="accent"><i class="fa fa-plus-square"></i> 添加相册</button>
+    </header>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="16px">
+        <div fxFlex.xs="100" fxFlex.gt-xs="20" *ngFor="let gallery of galleries">
+            <app-gallery-card [gallery]="gallery"></app-gallery-card>
+        </div>
+        <!-- <div fxFlex.xs="100" fxFlex.gt-xs="20">
+            <app-gallery-card [gallery]="gallery"></app-gallery-card>
+        </div> -->
+        
+    </div>
+</section>

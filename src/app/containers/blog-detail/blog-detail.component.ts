@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { BlogService } from 'src/app/services/blog/blog.service';
 
 @Component({
   selector: 'app-blog-detail',
@@ -7,14 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogDetailComponent implements OnInit {
 
-  title: string = '你好';
-  content: string = '<p>这是日记内容</p>'
+
+  id: string = '';
+  title: string = '';
+  content: string = ''
 
   author: string = '晓龙'
 
-  constructor() { }
+  constructor(
+    private activeRoute: ActivatedRoute,
+    private blogService: BlogService
+  ) { }
 
   ngOnInit(): void {
+    this.id = this.activeRoute.snapshot.params.id
+    // console.log(this.activeRoute.snapshot.params)
+    this.blogService.getPost(this.id)
+      .subscribe(res => {
+        // console.log(res)
+        this.title = res.data.title;
+        this.content = res.data.content;
+      })
+
   }
 
 }

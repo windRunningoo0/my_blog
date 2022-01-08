@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { QuillModule w} from 'ngx-quill';
+import { QuillModule} from 'ngx-quill';
 
 @NgModule({
   declarations: [],

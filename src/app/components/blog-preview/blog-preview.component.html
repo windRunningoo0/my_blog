@@ -3,11 +3,11 @@
         <img [src]="blog.img">
     </section>
     <section class="preview-content">
-        <h2><a routerLink="/note/201192102">{{blog.title}}</a></h2>
+        <h2><a :routerLink="/note/{{blog.id}}">{{blog.title}}</a></h2>
         <time>{{blog.time}}</time>
         <section class="blog-preview-content">
-            {{blog.content}}
-            <a routerLink="/note/201192102">(阅读更多...)</a>
+            {{blog.previewContent}}...
+            <a :routerLink="/note/{{blog.id}}">(阅读更多...)</a>
         </section>
     </section>
     

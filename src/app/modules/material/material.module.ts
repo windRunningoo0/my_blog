@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatIconRegistry} from '@angular/material/icon'
 
 
 @NgModule({
@@ -16,4 +17,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatDividerModule
   ]
 })
-export class MaterialModule { }
+export class MaterialModule { 
+  constructor(private matIconRegistry: MatIconRegistry) {
+    this.matIconRegistry.registerFontClassAlias('fontawesome', 'fa');
+  }
+}

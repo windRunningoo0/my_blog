@@ -1,8 +1,7 @@
 .gallery-preview {
     // float: left;
-}
-.gallery-cover-img {
-    width: 112px; height: 112px;
+    .gallery-cover-img {
+    // width: 112px; height: 112px;
     background-color: rgb(240, 240, 240);
     border: 1px solid #cccccc;
     overflow: hidden;
@@ -17,4 +16,5 @@
         font-size: 12px;
         color: rgb(168, 168, 168);
     }
+}
 }

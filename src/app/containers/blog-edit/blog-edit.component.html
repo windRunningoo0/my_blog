@@ -4,13 +4,14 @@
     </section>
     <section class="header-operate-btn-group">
         <button mat-button>预览</button>
+        <button mat-button (click)="onSave()">保存</button>
         <button mat-flat-button color="primary" class="next-step-btn">下一步</button>
     </section>
 </header>
 <section class="main-edit-area">
     <mat-form-field width="100%">
-        <input matInput placeholder="标题" [value]="title">
+        <input matInput placeholder="标题" name="title" [(ngModel)]="title">
     </mat-form-field>
     
-    <quill-editor placeholder="写日记...">写日记</quill-editor>
+    <quill-editor placeholder="写日记..." (onContentChanged)="onContentChanged($event)" [(ngModel)]="content" (onEditorCreated)="onEditorCreated($event)">写日记</quill-editor>
 </section>
